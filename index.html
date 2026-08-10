@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardeal do Raio-X — Raio-X a Domicílio em João Pessoa, PB</title>
+  <meta name="description"
+    content="Raio-X a domicílio em João Pessoa e região. Exames de imagem realizados por técnicos habilitados com equipamento digital portátil. Sem fila, sem deslocamento. Agende pelo WhatsApp." />
+  <meta property="og:title" content="Cardeal do Raio-X — Raio-X a Domicílio em João Pessoa, PB" />
+  <meta property="og:description"
+    content="Exame de raio-X no conforto da sua casa. Técnicos habilitados, equipamento portátil digital, laudo para o seu médico. João Pessoa e região." />
+  <meta property="og:type" content="website" />
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Cardeal do Raio-X","telephone":"+5583980309890","areaServed":{"@type":"City","name":"João Pessoa"},"sameAs":["https://www.instagram.com/ray_tec_radiologia/"]}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F2F7FF;
+      --text: #0C1A38;
+      --accent: #1A58A8;
+      --accent-dark: #103D7A;
+      --accent-light: #E8F2FF;
+      --muted: #526080;
+      --white: #FFFFFF;
+      --border: #D4E4F7;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.3);
+        opacity: .7;
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 3px;
+    }
+
+    .container {
+      max-width: 1152px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    @media(min-width:1024px) {
+      .container {
+        padding: 0 48px;
+      }
+    }
+
+    #site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: linear-gradient(135deg, #0B1936 0%, #173470 100%);
+      transition: box-shadow .3s;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, .12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-name {
+      color: #fff;
+      font-weight: 800;
+      font-size: 1rem;
+      line-height: 1.15;
+    }
+
+    .logo-sub {
+      color: rgba(255, 255, 255, .55);
+      font-size: .7rem;
+      font-weight: 400;
+    }
+
+    .desktop-nav {
+      display: none;
+      align-items: center;
+      gap: 32px;
+    }
+
+    @media(min-width:768px) {
+      .desktop-nav {
+        display: flex;
+      }
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, .82);
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 500;
+      position: relative;
+      transition: color .2s;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transition: width .3s ease;
+    }
+
+    .nav-link:hover {
+      color: #fff;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+    }
+
+    @media(min-width:768px) {
+      .hamburger {
+        display: none;
+      }
+    }
+
+    .bar {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform .3s, opacity .3s, width .3s;
+    }
+
+    .bar-3 {
+      width: 18px;
+    }
+
+    #mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding-bottom: 20px;
+    }
+
+    #mobile-menu.open {
+      display: flex;
+    }
+
+    .mob-link {
+      color: rgba(255, 255, 255, .8);
+      text-decoration: none;
+      font-size: .95rem;
+      font-weight: 500;
+      padding: 12px 4px;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      transition: color .2s;
+    }
+
+    .mob-link:hover {
+      color: #fff;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(26, 88, 168, .4);
+      background: var(--accent-dark);
+    }
+
+    .btn-ghost {
+      color: rgba(255, 255, 255, .88);
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: .95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid rgba(255, 255, 255, .45);
+      transition: border-color .2s, background .2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255, 255, 255, .9);
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .btn-white {
+      background: #fff;
+      color: var(--accent);
+      padding: 18px 36px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .18);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, .26);
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #0B1936 0%, #14407F 60%, #1A58A8 100%);
+      padding-top: 72px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, .06) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(26, 88, 168, .35) 0%, transparent 70%);
+      top: -200px;
+      right: -200px;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .09);
+      border: 1px solid rgba(255, 255, 255, .18);
+      padding: 7px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: #4ADE80;
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+      flex-shrink: 0;
+    }
+
+    .hero-badge span {
+      color: rgba(255, 255, 255, .88);
+      font-size: .8rem;
+      font-weight: 500;
+    }
+
+    .hero-h1 {
+      color: #fff;
+      font-size: clamp(2rem, 5.5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.12;
+      margin-bottom: 22px;
+      letter-spacing: -.5px;
+    }
+
+    .hero-h1 em {
+      font-style: normal;
+      color: #82BFFF;
+    }
+
+    .hero-sub {
+      color: rgba(255, 255, 255, .72);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 490px;
+      margin-bottom: 38px;
+    }
+
+    .trust-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .trust-pill {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: rgba(255, 255, 255, .7);
+      font-size: .82rem;
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      max-width: 440px;
+      width: 100%;
+      margin: 0 auto;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-card {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px 18px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .15);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .fc-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--accent-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .fc-label {
+      font-size: .72rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .fc-value {
+      font-size: .9rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .section-label {
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.18;
+      margin-bottom: 18px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 560px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(26, 88, 168, .11);
+      border-color: #B8D4F5;
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      line-height: 1;
+    }
+
+    .card-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .card-cta {
+      color: var(--accent);
+      font-size: .83rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap .2s, color .2s;
+    }
+
+    .card-cta:hover {
+      gap: 8px;
+      color: var(--accent-dark);
+    }
+
+    .equip-banner {
+      background: linear-gradient(135deg, #0B1936, #1A58A8);
+      border-radius: 20px;
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      overflow: hidden;
+    }
+
+    @media(min-width:768px) {
+      .equip-banner {
+        flex-direction: row;
+        text-align: left;
+        gap: 48px;
+      }
+    }
+
+    .equip-banner-text {
+      flex: 1;
+    }
+
+    .equip-banner-img {
+      flex: 1;
+      max-width: 400px;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .step-num {
+      width: 46px;
+      height: 46px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 800;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(26, 88, 168, .35);
+    }
+
+    .step-wrap {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .step-body h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .step-body p {
+      color: var(--muted);
+      font-size: .91rem;
+      line-height: 1.7;
+    }
+
+    .seal {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+    }
+
+    .seal-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--accent-light);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .seal span {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      transition: border-color .2s;
+    }
+
+    .faq-item[open] {
+      border-color: #9BC3EE;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      padding: 20px 24px;
+      font-weight: 600;
+      font-size: .97rem;
+      color: var(--text);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: color .2s;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--accent);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-item[open] summary {
+      color: var(--accent);
+    }
+
+    .faq-answer {
+      padding: 0 24px 20px;
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.75;
+    }
+
+    .photo-ph {
+      background: linear-gradient(135deg, #BDD8F5, #8FBEE8);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 32px;
+    }
+
+    .photo-ph span {
+      color: #1A58A8;
+      font-size: .85rem;
+      font-weight: 500;
+      line-height: 1.6;
+      max-width: 240px;
+    }
+
+    .photo-ph-dk {
+      background: rgba(255, 255, 255, .1);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 32px;
+    }
+
+    .photo-ph-dk span {
+      color: rgba(255, 255, 255, .65);
+      font-size: .85rem;
+      font-weight: 500;
+      line-height: 1.6;
+      max-width: 240px;
+    }
+
+    .cta-bg {
+      background: linear-gradient(135deg, #0B1936, #14407F 50%, #1A58A8 100%);
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .contact-card-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255, 255, 255, .5);
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .contact-card-value {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .footer-bg {
+      background: #080F22;
+    }
+
+    .footer-link {
+      color: rgba(255, 255, 255, .45);
+      font-size: .87rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color .2s;
+    }
+
+    .footer-link:hover {
+      color: rgba(255, 255, 255, .85);
+    }
+
+    .footer-nav-link {
+      color: rgba(255, 255, 255, .45);
+      font-size: .87rem;
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .footer-nav-link:hover {
+      color: rgba(255, 255, 255, .85);
+    }
+
+    .chk {
+      color: #4ADE80;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header id="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Navegação principal">
+        <a href="#inicio" class="logo-wrap" aria-label="Cardeal do Raio-X">
+          <div class="logo-icon" aria-hidden="true" style="background:transparent;padding:0;overflow:hidden;">
+            <img src="img/Cardeal Raio-x.png" alt="Logo Cardeal do Raio-X" style="width:40px;height:40px;object-fit:contain;display:block;" /></div>
+          <div><span class="logo-name">Cardeal do Raio-X</span><span class="logo-sub" style="display:block;">Radiologia
+              a Domicílio · João Pessoa</span></div>
+        </a>
+        <div class="desktop-nav" role="navigation">
+          <a href="#servicos" class="nav-link">Serviços</a>
+          <a href="#como-funciona" class="nav-link">Como Funciona</a>
+          <a href="#sobre" class="nav-link">Sobre</a>
+          <a href="#faq" class="nav-link">Dúvidas</a>
+          <!-- TROCAR ESTE NUMERO ANTES DE ENVIAR -->
+          <a href="https://wa.me/558398030989?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20raio-X%20a%20domic%C3%ADlio."
+            class="btn-primary" style="padding:10px 20px;font-size:.85rem;" target="_blank" rel="noopener noreferrer"
+            aria-label="Agendar raio-X pelo WhatsApp">Agendar agora</a>
+        </div>
+        <button class="hamburger" id="menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <span class="bar" id="b1"></span><span class="bar" id="b2"></span><span class="bar bar-3" id="b3"></span>
+        </button>
+      </nav>
+      <div id="mobile-menu" role="navigation" aria-label="Menu mobile">
+        <a href="#servicos" class="mob-link">Serviços</a>
+        <a href="#como-funciona" class="mob-link">Como Funciona</a>
+        <a href="#sobre" class="mob-link">Sobre</a>
+        <a href="#faq" class="mob-link">Dúvidas</a>
+        <a href="#contato" class="mob-link">Contato</a>
+        <!-- TROCAR ESTE NUMERO ANTES DE ENVIAR -->
+        <a href="https://wa.me/558398030989?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20raio-X%20a%20domic%C3%ADlio."
+          class="btn-primary" style="margin-top:12px;justify-content:center;" target="_blank"
+          rel="noopener noreferrer">Agendar via WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero-bg" aria-label="Apresentação do serviço">
+    <div class="hero-grid-pattern" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container" style="width:100%;padding-top:80px;padding-bottom:80px;">
+      <div id="hero-grid" style="display:grid;grid-template-columns:1fr;gap:48px;align-items:center;">
+        <div class="fade-in">
+          <div class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span><span>Atendendo em João Pessoa
+              e região — PB</span></div>
+          <h1 class="hero-h1">Raio-X na sua casa,<br><em>sem fila e sem</em><br>deslocamento</h1>
+          <p class="hero-sub">Exames de imagem realizados por técnicos em radiologia habilitados, com equipamento
+            digital portátil de alto padrão — direto onde você está. Cuidado de verdade pra quem você ama.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;">
+            <!-- TROCAR ESTE NUMERO ANTES DE ENVIAR -->
+            <a href="https://wa.me/558398030989?text=Ol%C3%A1%21%20Quero%20agendar%20um%20raio-X%20a%20domic%C3%ADlio%20em%20Jo%C3%A3o%20Pessoa.%20Pode%20me%20ajudar%3F"
+              class="btn-primary" target="_blank" rel="noopener noreferrer"
+              aria-label="Agendar exame de raio-X a domicílio via WhatsApp">Agendar meu exame</a>
+            <a href="#servicos" class="btn-ghost" aria-label="Ver os serviços disponíveis">Ver serviços &darr;</a>
+          </div>
+          <div class="trust-pills">
+            <div class="trust-pill"><span class="chk">&#10003;</span> Técnicos habilitados (CRTR-PB)</div>
+            <div class="trust-pill"><span class="chk">&#10003;</span> Equipamento digital portátil</div>
+            <div class="trust-pill"><span class="chk">&#10003;</span> Laudo para o seu médico</div>
+          </div>
+        </div>
+        <div class="fade-in" style="transition-delay:.2s;display:flex;justify-content:center;align-items:center;">
+          <div class="hero-photo-wrap" style="max-width:380px;width:100%;">
+            <img src="img/cardeal.png" alt="Técnico em radiologia habilitado do Cardeal do Raio-X"
+              style="border-radius:20px;box-shadow:0 40px 80px rgba(0,0,0,.45);width:100%;max-height:480px;object-fit:cover;object-position:top;display:block;" />
+            <div class="floating-card" aria-hidden="true">
+              <div class="fc-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#1A58A8"
+                  stroke-width="2" stroke-linecap="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.18 2 2 0 011.72 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                </svg></div>
+              <div>
+                <p class="fc-label">Agende agora</p>
+                <p class="fc-value">(83) 9803-0989</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);text-align:center;"
+      aria-hidden="true">
+      <span
+        style="color:rgba(255,255,255,.3);font-size:.7rem;letter-spacing:1.5px;display:block;margin-bottom:6px;">ROLE
+        PARA BAIXO</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2"
+        stroke-linecap="round">
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- PARA QUEM E -->
+  <section id="servicos" style="padding:96px 0;background:var(--bg);" aria-labelledby="servicos-titulo">
+    <div class="container">
+
+      <!-- Cabeçalho centralizado: título, subtítulo e descrição -->
+      <div id="para-quem-header" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;margin:0 auto 64px;max-width:760px;" class="fade-in">
+        <div style="width:100%;">
+          <!-- <p class="section-label">Para quem é</p> -->
+          <h2 class="section-title" id="servicos-titulo" style="margin-bottom:12px;">Para quem é?</h2>
+          <p style="color:var(--accent);font-size:1.05rem;font-weight:600;line-height:1.4;margin:0 auto 12px;max-width:620px;">Quando sair de casa não é simples,<br>o cuidado precisa chegar.</p>
+          <p class="section-sub" style="margin:0 auto;max-width:680px;">O Raio-X em domicílio ajuda a tornar o exame mais acessível para pacientes que precisam evitar deslocamentos longos, filas e ambientes externos.</p>
+        </div>
+      </div>
+
+      <!-- 3 Cards de público-alvo com imagem -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,280px));gap:24px;justify-content:center;max-width:1080px;margin:0 auto;">
+
+        <!-- Card 1: Mobilidade reduzida -->
+        <article class="audience-card fade-in" style="transition-delay:.05s;background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease,border-color .25s;">
+          <div style="width:100%;aspect-ratio:4/3;overflow:hidden;background:#EDF4FF;">
+            <img src="img/rapaz muleta.png" alt="Jovem com muleta, representando pessoas com mobilidade reduzida"
+              style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
+          </div>
+          <div style="padding:24px 28px 28px;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+            <h3 style="font-size:1.08rem;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.3;">Pessoas com mobilidade reduzida</h3>
+            <p style="color:var(--muted);font-size:.91rem;line-height:1.7;">Mais comodidade para quem enfrenta limitações temporárias ou permanentes de locomoção.</p>
+          </div>
+        </article>
+
+        <!-- Card 2: Idosos e acamados -->
+        <article class="audience-card fade-in" style="transition-delay:.12s;background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease,border-color .25s;">
+          <div style="width:100%;aspect-ratio:4/3;overflow:hidden;background:#EDF4FF;">
+            <img src="img/idoso.png" alt="Idoso descansando, representando pacientes acamados ou com mobilidade limitada"
+              style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
+          </div>
+          <div style="padding:24px 28px 28px;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+            <h3 style="font-size:1.08rem;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.3;">Idosos e pacientes acamados</h3>
+            <p style="color:var(--muted);font-size:.91rem;line-height:1.7;">Idosos e pacientes acamados.</p>
+          </div>
+        </article>
+
+        <!-- Card 3: Pós-operatório -->
+        <article class="audience-card fade-in" style="transition-delay:.2s;background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease,border-color .25s;">
+          <div style="width:100%;aspect-ratio:4/3;overflow:hidden;background:#EDF4FF;">
+            <img src="img/jovem em cadeira de rodas.png" alt="Jovem em cadeira de rodas, representando recuperação e pós-operatório"
+              style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
+          </div>
+          <div style="padding:24px 28px 28px;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+            <h3 style="font-size:1.08rem;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.3;">Pós-operatório e recuperação</h3>
+            <p style="color:var(--muted);font-size:.91rem;line-height:1.7;">Uma alternativa prática quando sair de casa exige esforço, transporte especial ou apoio adicional.</p>
+          </div>
+        </article>
+
+      </div>
+      <!-- Hover lift para os cards de audiência -->
+      <style>.audience-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(26,88,168,.11);border-color:#B8D4F5;}</style>
+      <!-- Banner Equipamento -->
+      <div class="equip-banner fade-in" style="margin-top:56px;" aria-label="Nosso equipamento">
+        <div class="equip-banner-text">
+          <p
+            style="color:rgba(255,255,255,.5);font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">
+            Nosso equipamento</p>
+          <h3 style="color:#fff;font-size:1.5rem;font-weight:800;margin-bottom:16px;line-height:1.25;">Tecnologia
+            digital portátil<br>de alto padrão</h3>
+          <p style="color:rgba(255,255,255,.65);font-size:.93rem;line-height:1.75;margin-bottom:24px;">Operamos com
+            equipamento portátil de raio-X digital com detector de alta resolução — o mesmo padrão de qualidade de uma
+            clínica, dentro da sua casa. Seguimos as normas de proteção radiológica da CNEN.</p>
+          <!-- Botão verde WhatsApp -->
+          <a href="https://wa.me/558398030989?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20raio-X%20a%20domic%C3%ADlio."
+            class="btn-wa" target="_blank" rel="noopener noreferrer">Tirar dúvidas no WhatsApp</a>
+          <style>
+            .btn-wa{background:#25D366;color:#fff;padding:14px 24px;border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .2s,color .2s,box-shadow .2s;width:fit-content;}
+            .btn-wa:hover{background:#fff;color:#25D366;box-shadow:0 0 0 2px #25D366 inset;}
+          </style>
+        </div>
+        <div class="equip-banner-img">
+          <img src="img/Aparelho Radio, Placa, Notebook.png" alt="Equipamento portátil de raio-X digital com detector e notebook"
+            style="width:100%;border-radius:14px;object-fit:cover;display:block;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" style="padding:96px 0;background:var(--white);" aria-labelledby="como-funciona-titulo">
+    <div class="container">
+      <div class="text-center fade-in" style="margin-bottom:64px;">
+        <p class="section-label">Simples assim</p>
+        <h2 class="section-title" id="como-funciona-titulo">Como funciona o<br>atendimento a domicílio</h2>
+        <p class="section-sub" style="margin:0 auto;">Sem deslocamento, sem fila, sem estresse. Em quatro passos você
+          tem o exame feito no conforto da sua casa.</p>
+      </div>
+      <div id="como-grid" style="display:grid;grid-template-columns:1fr;gap:48px;align-items:center;">
+        <div style="display:grid;grid-template-columns:1fr;gap:36px;" class="fade-in">
+          <div class="step-wrap">
+            <div class="step-num" aria-label="Passo 1">1</div>
+            <div class="step-body">
+              <h3>Tenha o pedido médico em mãos</h3>
+              <p>O exame de raio-X requer solicitação do seu médico assistente — isso garante que as imagens sejam
+                usadas corretamente no seu acompanhamento. Sem pedido, sem exame: é a regra que protege você.</p>
+            </div>
+          </div>
+          <div class="step-wrap">
+            <div class="step-num" aria-label="Passo 2">2</div>
+            <div class="step-body">
+              <h3>Agende pelo WhatsApp</h3>
+              <p>Mande mensagem com o pedido, seu endereço em João Pessoa e o horário de preferência. A gente verifica a
+                disponibilidade e confirma rapidinho — sem burocracia.</p>
+            </div>
+          </div>
+          <div class="step-wrap">
+            <div class="step-num" aria-label="Passo 3">3</div>
+            <div class="step-body">
+              <h3>Receba o técnico na sua casa</h3>
+              <p>O técnico em radiologia habilitado chega no horário combinado com todo o equipamento. O exame leva
+                poucos minutos, com segurança radiológica e cuidado no atendimento.</p>
+            </div>
+          </div>
+          <div class="step-wrap">
+            <div class="step-num" aria-label="Passo 4">4</div>
+            <div class="step-body">
+              <h3>Receba as imagens e o laudo</h3>
+              <p>As imagens digitais e o laudo elaborado pelo médico radiologista são entregues para você apresentar ao
+                seu médico assistente. <!-- INFERIDO: confirmar prazo e formato (digital/impresso) com o cliente --></p>
+            </div>
+          </div>
+          <!-- Botão verde WhatsApp -->
+          <a href="https://wa.me/558398030989?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20raio-X%20a%20domic%C3%ADlio%20em%20Jo%C3%A3o%20Pessoa.%20Como%20funciona%3F"
+            class="btn-wa" style="width:fit-content;" target="_blank" rel="noopener noreferrer">Agendar meu exame agora</a>
+        </div>
+        <div class="fade-in" style="transition-delay:.2s;">
+          <img src="img/cardeal.png"
+            alt="Profissional de radiologia em jaleco branco com postura confiante e sorriso acolhedor"
+            style="width:100%;max-height:520px;border-radius:20px;box-shadow:0 16px 48px rgba(26,88,168,.12);object-fit:cover;object-position:top;display:block;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" style="padding:96px 0;background:var(--bg);" aria-labelledby="sobre-titulo">
+    <div class="container">
+      <!-- Layout: imagem esquerda + texto direita, alinhados -->
+      <div id="sobre-grid" style="display:grid;grid-template-columns:1fr;gap:56px;align-items:start;">
+
+        <!-- Coluna esquerda: foto + seals abaixo -->
+        <div class="fade-in">
+          <img src="img/cardeal 2.png" alt="Profissional do Cardeal do Raio-X em atendimento humanizado"
+            style="width:100%;max-height:500px;border-radius:20px;box-shadow:0 16px 48px rgba(26,88,168,.12);object-fit:cover;object-position:top;display:block;margin-bottom:20px;" />
+          <!-- 3 seals lado a lado abaixo da imagem -->
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <div class="seal" style="flex:1;min-width:180px;">
+              <div class="seal-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="#1A58A8" stroke-width="2" stroke-linecap="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg></div><span>Técnicos registrados no CRTR-PB</span>
+            </div>
+            <div class="seal" style="flex:1;min-width:180px;">
+              <div class="seal-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="#1A58A8" stroke-width="2" stroke-linecap="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg></div><span>Atendimento com hora marcada, sem espera</span>
+            </div>
+            <div class="seal" style="flex:1;min-width:180px;">
+              <div class="seal-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="#1A58A8" stroke-width="2" stroke-linecap="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                </svg></div><span>Atendimento humanizado — pra você e pra família</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna direita: texto -->
+        <div class="fade-in" style="transition-delay:.15s;">
+          <p class="section-label">Atendimento humanizado</p>
+          <h2 class="section-title" id="sobre-titulo">Mais do que levar o equipamento, é saber acolher cada paciente.</h2>
+          <p style="color:var(--muted);font-size:.96rem;line-height:1.8;margin-bottom:18px;">A Cardeal do Raio-X nasceu para facilitar o acesso ao exame radiológico de quem não consegue se deslocar com tranquilidade.</p>
+          <p style="color:var(--muted);font-size:.96rem;line-height:1.8;margin-bottom:0;">Cada atendimento começa com uma conversa cuidadosa para entender a necessidade, orientar a família e verificar as condições para realização do exame no domicílio.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding:96px 0;background:var(--white);" aria-labelledby="faq-titulo">
+    <div class="container">
+      <div class="text-center fade-in" style="margin-bottom:64px;">
+        <p class="section-label">Dúvidas frequentes</p>
+        <h2 class="section-title" id="faq-titulo">Perguntas que você<br>provavelmente tem</h2>
+        <p class="section-sub" style="margin:0 auto;">Não encontrou o que precisava? Manda mensagem no WhatsApp — a
+          gente responde rápido.</p>
+      </div>
+      <div style="max-width:700px;margin:0 auto;" class="fade-in">
+        <details class="faq-item">
+          <summary>Preciso de pedido médico para agendar o exame?</summary>
+          <div class="faq-answer">Sim. O exame de raio-X a domicílio é realizado mediante solicitação do seu médico
+            assistente. A indicação médica garante que o exame seja utilizado corretamente no seu tratamento e é exigida
+            pelas normas sanitárias vigentes (ANVISA/RDC 611/2022). Ao agendar, basta nos enviar o pedido pelo WhatsApp.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Como recebo o resultado do exame?</summary>
+          <div class="faq-answer">As imagens digitais e o laudo elaborado pelo médico radiologista são entregues após a
+            realização do exame. <!-- INFERIDO: confirmar prazo e formato com o cliente --> Pergunte sobre prazo e
+            formato no momento do agendamento.</div>
+        </details>
+        <details class="faq-item">
+          <summary>O raio-X em casa é seguro? Tem risco de radiação?</summary>
+          <div class="faq-answer">Sim, é seguro. O equipamento digital portátil emite doses de radiação controladas —
+            compatíveis com as utilizadas em clínicas convencionais. O técnico habilitado aplica todos os protocolos de
+            proteção radiológica conforme ANVISA e CNEN.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Em quais bairros e regiões de João Pessoa vocês atendem?</summary>
+          <div class="faq-answer"><!-- INFERIDO: confirmar área de cobertura exata com o cliente --> Atendemos João
+            Pessoa e região. Para confirmar se o seu endereço está na nossa área de cobertura, mande mensagem no
+            WhatsApp com o seu bairro — a gente verifica rapidinho.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Quais formas de pagamento são aceitas?</summary>
+          <div class="faq-answer"><!-- INFERIDO: confirmar formas de pagamento com o cliente --> Aceitamos Pix, cartão
+            de crédito/débito e dinheiro. Para informações sobre convênios e planos de saúde, entre em contato pelo
+            WhatsApp.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contato" class="cta-bg" style="padding:80px 0;" aria-labelledby="cta-titulo">
+    <div class="container">
+      <div class="fade-in">
+        <!-- Linha superior: label + botão WA à direita -->
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:20px;">
+          <p class="section-label" style="color:rgba(255,255,255,.55);margin-bottom:0;">Atendimento em João Pessoa</p>
+          <a href="https://wa.me/558398030989?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20o%20agendamento%20de%20um%20raio-X%20a%20domic%C3%ADlio%20em%20Jo%C3%A3o%20Pessoa."
+            class="btn-wa-cta" target="_blank" rel="noopener noreferrer"
+            aria-label="Consultar agendamento pelo WhatsApp">
+            <!-- Ícone WhatsApp SVG -->
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" style="flex-shrink:0;">
+              <path d="M16 0C7.163 0 0 7.163 0 16c0 2.824.736 5.476 2.027 7.774L0 32l8.476-2.001A15.934 15.934 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.267 13.267 0 01-6.773-1.853l-.485-.287-5.027 1.187 1.213-4.901-.315-.503A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.916c-.397-.199-2.352-1.161-2.717-1.293-.365-.133-.631-.199-.897.199-.266.398-.963 1.16-1.18 1.394-.217.233-.433.266-.83.066-.397-.2-1.677-.618-3.195-1.972-1.18-1.053-1.977-2.352-2.21-2.75-.232-.398-.024-.613.175-.811.18-.179.397-.466.596-.699.199-.232.265-.398.397-.664.133-.265.067-.498-.033-.697-.1-.2-.897-2.163-1.229-2.96-.324-.779-.653-.673-.897-.685l-.764-.013c-.266 0-.697.1-1.063.498s-1.395 1.362-1.395 3.323c0 1.96 1.428 3.856 1.627 4.122.2.265 2.812 4.292 6.813 6.021.952.411 1.695.657 2.274.841.955.305 1.824.262 2.511.159.766-.114 2.352-.961 2.684-1.889.332-.928.332-1.724.232-1.889-.099-.165-.365-.265-.762-.464z"/>
+            </svg>
+            Consultar agendamento — (83) 9803-0989
+          </a>
+        </div>
+        <!-- Título principal -->
+        <h2 class="section-title" id="cta-titulo" style="color:#fff;margin-bottom:18px;max-width:700px;">Marque agora seu exame sem sair de casa</h2>
+        <p style="color:rgba(255,255,255,.65);font-size:1rem;line-height:1.75;max-width:500px;margin:0 0 40px;">Manda uma mensagem, a gente confirma a disponibilidade rapidinho e encontra o melhor horário pra você.</p>
+        <div
+          style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:640px;margin:0 0 28px;">
+          <div class="contact-card">
+            <div class="contact-card-label">WhatsApp</div>
+            <p class="contact-card-value">(83) 9803-0989</p>
+          </div>
+          <!-- INFERIDO: confirmar horario real com o cliente -->
+          <div class="contact-card">
+            <div class="contact-card-label">Horário</div>
+            <p class="contact-card-value">Seg–Sex: 7h às 20h<br>Sáb: 8h às 14h</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-label">Atendimento</div>
+            <p class="contact-card-value">João Pessoa e região — PB</p>
+          </div>
+        </div>
+        <div><a href="https://www.instagram.com/ray_tec_radiologia/" target="_blank" rel="noopener noreferrer"
+            style="display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.45);font-size:.88rem;text-decoration:none;"
+            aria-label="Instagram Cardeal do Raio-X">@ray_tec_radiologia</a></div>
+      </div>
+    </div>
+    <!-- Estilo do botão WA da CTA -->
+    <style>
+      .btn-wa-cta{background:#25D366;color:#fff;padding:14px 22px;border-radius:10px;font-weight:700;font-size:.92rem;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:background .2s,color .2s,box-shadow .2s;white-space:nowrap;}
+      .btn-wa-cta:hover{background:#fff;color:#25D366;box-shadow:0 0 0 2px #25D366 inset;}
+    </style>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-bg" style="padding:64px 0 32px;" role="contentinfo">
+    <div class="container">
+      <div
+        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07);">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <div
+              style="width:34px;height:34px;background:rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round">
+                <rect x="3" y="3" width="18" height="18" rx="3" />
+                <path d="M8 12h8M12 8v8" />
+              </svg></div><span style="color:#fff;font-weight:800;font-size:.95rem;">Cardeal do Raio-X</span>
+          </div>
+          <p style="color:rgba(255,255,255,.35);font-size:.85rem;line-height:1.75;">Raio-X a domicílio em<br>João
+            Pessoa, PB.<br>Cuidado e tecnologia<br>onde você precisar.</p>
+        </div>
+        <div>
+          <h3 style="color:#fff;font-weight:700;font-size:.85rem;letter-spacing:.5px;margin-bottom:18px;">Navegação</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+            <li><a href="#inicio" class="footer-nav-link">Início</a></li>
+            <li><a href="#servicos" class="footer-nav-link">Serviços</a></li>
+            <li><a href="#como-funciona" class="footer-nav-link">Como Funciona</a></li>
+            <li><a href="#sobre" class="footer-nav-link">Sobre</a></li>
+            <li><a href="#faq" class="footer-nav-link">Dúvidas</a></li>
+            <li><a href="#contato" class="footer-nav-link">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color:#fff;font-weight:700;font-size:.85rem;letter-spacing:.5px;margin-bottom:18px;">Contato</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <!-- TROCAR ESTE NUMERO ANTES DE ENVIAR -->
+            <a href="https://wa.me/558398030989" target="_blank" rel="noopener noreferrer" class="footer-link"
+              aria-label="WhatsApp Cardeal do Raio-X">(83) 9803-0989</a>
+            <a href="https://www.instagram.com/ray_tec_radiologia/" target="_blank" rel="noopener noreferrer"
+              class="footer-link" aria-label="Instagram Cardeal do Raio-X">@ray_tec_radiologia</a>
+            <span class="footer-link" style="cursor:default;">João Pessoa, PB</span>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top:24px;text-align:center;display:flex;flex-direction:column;gap:8px;">
+        <p style="color:rgba(255,255,255,.2);font-size:.78rem;">&copy; <span id="year"></span> Cardeal do Raio-X
+          &middot; Todos os direitos reservados.</p>
+        <p style="color:rgba(255,255,255,.15);font-size:.73rem;max-width:600px;margin:0 auto;line-height:1.6;">Serviço
+          regulamentado. Exames realizados por técnicos em radiologia habilitados e registrados no CRTR-PB, conforme
+          ANVISA RDC 611/2022 e normas CNEN. Laudos elaborados por médico radiologista. Material publicitatário em
+          conformidade com Res. CFM 2.336/2023.</p>
+        <p style="color:rgba(255,255,255,.12);font-size:.72rem;">Site desenvolvido com cuidado.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    var hdr = document.getElementById("site-header");
+    window.addEventListener("scroll", function () {hdr.style.boxShadow = window.scrollY > 20 ? "0 4px 24px rgba(0,0,0,.3)" : "";}, {passive: true});
+    var btn = document.getElementById("menu-btn"), mob = document.getElementById("mobile-menu"),
+      b1 = document.getElementById("b1"), b2 = document.getElementById("b2"), b3 = document.getElementById("b3"), isOpen = false;
+    btn.addEventListener("click", function () {
+      isOpen = !isOpen; mob.classList.toggle("open", isOpen); btn.setAttribute("aria-expanded", isOpen);
+      if (isOpen) {b1.style.transform = "rotate(45deg) translate(5px,5px)"; b2.style.opacity = "0"; b3.style.transform = "rotate(-45deg) translate(5px,-5px)"; b3.style.width = "24px";}
+      else {b1.style.transform = ""; b2.style.opacity = "1"; b3.style.transform = ""; b3.style.width = "18px";}
+    });
+    mob.querySelectorAll("a").forEach(function (l) {l.addEventListener("click", function () {isOpen = false; mob.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); b1.style.transform = b3.style.transform = ""; b2.style.opacity = "1"; b3.style.width = "18px";});});
+    function setGrids() {
+      var w = window.innerWidth >= 1024;
+      var hg = document.getElementById("hero-grid"); if (hg) hg.style.gridTemplateColumns = w ? "1fr 1fr" : "1fr";
+      var cg = document.getElementById("como-grid"); if (cg) cg.style.gridTemplateColumns = w ? "1fr 1fr" : "1fr";
+      var sg = document.getElementById("sobre-grid"); if (sg) sg.style.gridTemplateColumns = w ? "1fr 1fr" : "1fr";
+      var pq = document.getElementById("para-quem-header"); if (pq) pq.style.gridTemplateColumns = w ? "1fr 1fr" : "1fr";
+    }
+    setGrids(); window.addEventListener("resize", setGrids, {passive: true});
+    var obs = new IntersectionObserver(function (entries) {entries.forEach(function (e) {if (e.isIntersecting) {e.target.classList.add("visible"); obs.unobserve(e.target);} });}, {threshold: .12, rootMargin: "0px 0px -40px 0px"});
+    document.querySelectorAll(".fade-in").forEach(function (el) {obs.observe(el);});
+  </script>
+</body>
+
+</html>

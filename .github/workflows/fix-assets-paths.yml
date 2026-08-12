@@ -1,0 +1,41 @@
+name: Fix image asset paths
+
+on:
+  push:
+    branches:
+      - fix-assets-paths
+
+permissions:
+  contents: write
+
+jobs:
+  fix-paths:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-assets-paths
+          fetch-depth: 0
+      - name: Update image paths only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          b = p.read_bytes()
+          b2 = b.replace(b'src="img/', b'src="./assets/')
+          b2 = b2.replace(b'src="assets/', b'src="./assets/')
+          if b2 != b:
+              p.write_bytes(b2)
+          PY
+      - name: Remove temporary workflow and commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/fix-assets-paths.yml
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "fix: use assets paths for all page images"
+          git push origin HEAD:fix-assets-paths

@@ -1,0 +1,27 @@
+
+# Dependências
+node_modules/
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.temp
+
+# Arquivos gerados pelo build e cache
+dist/
+build/
+.cache/
+.vite/
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
